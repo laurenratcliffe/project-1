@@ -173,6 +173,39 @@ header {
    }
 }
 
+// Styling Products Section 
+.ourProducts { 
+   // still require lines by "Our Products" 
+   text-align: center; 
+   h2 { 
+      font-family: $primaryFont;
+      font-weight: bolder;
+      font-size: 40px;
+      padding-bottom: 30px;
+   }
+   h2:before, 
+   h2:after { 
+      content: " ";
+      text-decoration: line-through;
+   }
+   button { 
+      background-color: white;
+      color: $greenColour;
+      padding: 10px 20px;
+      border-style: solid;
+      border-color: lightgray;
+      border-width: 1px;
+      border-radius: 5%;
+      margin: 15px;
+   }
+   button:hover{ 
+      border-color: $greenColour;
+      border-style: dotted;
+   }
+}
 
+// styling plants for sale section
 
-
+.article1 { 
+   background-color: red;
+}

@@ -367,3 +367,26 @@ header .headerImage img {
   flex-direction: column;
   padding: 10px;
 }
+
+.ourProducts {
+  text-align: center;
+}
+.ourProducts h2 {
+  font-family: Rubik, sans-serif;
+  font-weight: bolder;
+  font-size: 40px;
+  padding-bottom: 30px;
+}
+.ourProducts button {
+  background-color: white;
+  color: #abd373;
+  padding: 10px 20px;
+  border-style: solid;
+  border-color: lightgray;
+  border-radius: 5%;
+  margin: 15px;
+}
+.ourProducts button:hover {
+  border-color: #abd373;
+  border-style: dotted;
+}
