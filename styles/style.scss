@@ -14,8 +14,8 @@ $faintBlueColour: #f6f7fb;
 $peachColour: #F8EEE5;
 
 // font variables
-$primaryFont: Rubik, sans-serif, 400px;
-$secondaryFont: Rubik, sans-serif, 300px;
+$primaryFont: Rubik, sans-serif;
+$secondaryFont: Rubik, sans-serif;
 
 // general styling
 * { 
@@ -70,11 +70,11 @@ nav {
       .navButtons ul { 
          display: flex;
          flex-direction: row;
-      }
-      .navButtons ul a { 
-         padding: 2vw; 
-         font-family: rubik;
-         color: black;
+         a { 
+            padding: 2vw; 
+            font-family: rubik;
+            color: black;
+         }
       }
       .logo img { 
          height: 45px;
@@ -90,21 +90,89 @@ nav {
 // Header Styling 
 header { 
    background-color: $peachColour;
-   height: 50vh;
+   height: 80vh;
+   width: 100vw;
 
    .headerParent { 
       display: flex;
-
+      padding: 15vh 0;
    }
       .headerText { 
          display: flex;
          flex-direction: column;
+         width: 30vw;
       }
-      .headerImage { 
-         height: 200px;
+      .headerText h2{ 
+         font-family: $primaryFont;
+         font-size: 50px;
+         font-weight: lighter;
+      }
+
+      .headerText h3 { 
+         font-family: $primaryFont;
+         font-size: 65px;
+         font-weight: 300px;
+      }
+      .headerText h4 { 
+         font-family: $primaryFont;
+         font-size: 20px;
+         font-weight: normal;
+         padding-bottom: 50px;
+      }
+
+      .headerText button { 
+         background-color: $greenColour;
+         border: none;
+         color: white; 
+         padding: 20px;
          width: 200px;
+         border-radius: 30px;
+      }
+
+      .headerImage img { 
+         height: 500px;
+         width: 400px;
+         margin-right: 200px;
       }
 }
+
+// Styling services section 
+.servicesParent { 
+   display: flex; 
+   flex-direction: row;
+   justify-content: space-evenly;
+   padding: 100px;
+   .servicesBoxParent { 
+      display: flex;
+      justify-content: row;
+      padding: 10px;
+      margin: 10px;
+      border-style: dotted;
+      border-color: $greenColour;
+      border-radius: 5%;
+      border-width: 2px;
+      h4 { 
+         font-family: $primaryFont;
+         font-weight: 400px;
+         line-height: 20px;
+      }
+      p { 
+         font-family: $primaryFont;
+         font-weight: 300px;
+         font-size: 12px;
+      }
+      img {
+         height: 40px;
+         width: 50px;
+       }
+      .servicesBox { 
+         display: flex;
+         flex-direction: column;
+         padding: 10px;
+      }
+   }
+}
+
 
 
 

@@ -290,16 +290,80 @@ nav .navParent .shoppingCart img {
 
 header {
   background-color: #F8EEE5;
-  height: 50vh;
+  height: 80vh;
+  width: 100vw;
 }
 header .headerParent {
   display: flex;
+  padding: 15vh 0;
 }
 header .headerText {
   display: flex;
   flex-direction: column;
+  width: 30vw;
 }
-header .headerImage {
-  height: 200px;
+header .headerText h2 {
+  font-family: Rubik, sans-serif;
+  font-size: 50px;
+  font-weight: lighter;
+}
+header .headerText h3 {
+  font-family: Rubik, sans-serif;
+  font-size: 65px;
+  font-weight: 300px;
+}
+header .headerText h4 {
+  font-family: Rubik, sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  padding-bottom: 50px;
+}
+header .headerText button {
+  background-color: #abd373;
+  border: none;
+  color: white;
+  padding: 20px;
   width: 200px;
+  border-radius: 30px;
+}
+header .headerImage img {
+  height: 500px;
+  width: 400px;
+  margin-right: 200px;
+}
+
+.servicesParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 100px;
+}
+.servicesParent .servicesBoxParent {
+  display: flex;
+  justify-content: row;
+  padding: 10px;
+  margin: 10px;
+  border-style: dotted;
+  border-color: #abd373;
+  border-radius: 5%;
+  border-width: 2px;
+}
+.servicesParent .servicesBoxParent h4 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400px;
+  line-height: 20px;
+}
+.servicesParent .servicesBoxParent p {
+  font-family: Rubik, sans-serif;
+  font-weight: 300px;
+  font-size: 12px;
+}
+.servicesParent .servicesBoxParent img {
+  height: 40px;
+  width: 50px;
+}
+.servicesParent .servicesBoxParent .servicesBox {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
