@@ -4,40 +4,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/47180d0ef4.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css">
+
+    
     <title>Pronia</title>
 </head>
 
 <!-- Banner section -->
 <body>
     <div class="banner">
-        <p>hello everyone! 25% off all products</p>
-        <div bannerButtons>
-            <a href="canadian">CAD</a>
-            <a href="english">English</a>
+        <div class="wrapper bannerParent">
+            <div>
+                <p>HELLO EVERYONE! 25% OFF ALL PRODUCTS</p>
+            </div>
+            <div>
+                <a href="canadian">CAD</a>
+                <a href="english">ENGLISH</a>
+            </div>
         </div>
     </div>
 
 <!-- Navigation section -->
     <nav>
-        <img src="./assets/logo.png" alt="Pronia Logo">
-        <ul>
-            <li><a href="home">Home</a></li>
-            <li><a href="blog">Blog</a></li>
-            <li><a href="contactUs">Contact Us</a></li>
-        </ul>
-        
-        <img src="./assets/icons/shopping-bag.svg" alt="Shopping shopping-bag icon">
+        <div class="wrapper">
+            <div class="navParent">
+                <div class="logo">
+                    <img src="./assets/logo.png" alt="Pronia Logo">
+                </div>
+                <div class="navButtons">
+                    <ul>
+                        <li><a href="home">HOME</a></li>
+                        <li><a href="blog">BLOG</a></li>
+                        <li><a href="contactUs">CONTACT US</a></li>
+                    </ul>
+                </div>
+               <div class="shoppingCart">
+                     <img src="./assets/icons/shopping-bag.svg" alt="Shopping shopping-bag icon">
+               </div>
+            </div>
+        </div>
     </nav>
 <!-- Header image section -->
     <header>
-        <h2>65%</h2>
-        <h2>New Plant</h2>
-        <h2>Pronia, With 100% Natural, Organic & Plant Shop</h2>
-    
-        <button>Discover Now</button>
-        <img src="./assets/header.png" alt="Image of two succulents plants in potters">
+        <div class="headerParent">
+            <div class="headerText wrapper"> 
+                <h2>65%</h2>
+                <h2>New Plant</h2>
+                <h2>Pronia, With 100% Natural, Organic & Plant Shop</h2>
+                <button>Discover Now</button>
+            </div>
+            <div class="headerImage">
+                <img src="./assets/header.png" alt="Image of two succulents plants in potters">
+            </div>
+        </div>
     </header>
 
     <!-- Website services section -->
