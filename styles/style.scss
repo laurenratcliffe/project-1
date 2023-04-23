@@ -9,8 +9,8 @@ html { box-sizing: border-box;}
 // colour variables
 $greenColour: #abd373;
 $darkGreyColour: #4c4c4c;
-$lightGreyColour: #88cce2;
-$faintBlueColour: #f6f7fb;
+$lightGreyColour: #f6f7fb;
+$faintBlueColour: #88cce2; 
 $peachColour: #F8EEE5;
 
 // font variables
@@ -205,7 +205,186 @@ header {
 }
 
 // styling plants for sale section
-
-.article1 { 
-   background-color: red;
+.plantInventory { 
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   img { 
+         width: 200px; 
+         height: 200px
+      }
+   .plantForSale { 
+      display: flex; 
+      flex-direction: column;
+      .plantInfo img { 
+         width: 30px; 
+         height: 30px;
+         border: solid 1px lightgray;
+      }
+   }
 }
+
+// Styling Collection Posts Section 
+.newCollections { 
+   margin-top: 10vh;
+   height: 60vh;
+   .collectionsTop{ 
+      display: flex;
+      margin: 10px;
+      .cactusCollection { 
+         background-image: url(../assets/b1.jpeg);
+         min-width: 42vw;
+         // min-height: 20vh;
+         background-size: contain;
+         background-repeat: no-repeat;
+      }
+      .plantPort { 
+         background-image: url(../assets/b2.jpeg);
+         min-width: 30vw;
+         // min-height: 30vh;
+         background-size: contain;
+         background-repeat: no-repeat;
+      }
+   }
+   .collectionsBottom { 
+      display: flex;
+      margin: 10px;
+      .plantPort2 { 
+         background-image: url(../assets/b3.jpeg);
+         min-width: 20vw;
+         // min-height: 30vh;
+         background-size: contain;
+         background-repeat: no-repeat;
+      }
+      .hangingCollection { 
+         background-image: url(../assets/b4.jpeg);
+         min-width: 40vw;
+         // min-height: 30vh;
+         background-size: contain;
+         background-repeat: no-repeat;
+      }
+   }
+}
+
+
+
+
+// Styling Article Sections 
+.latestPosts { 
+   text-align: center;
+   font-size: 15px;
+   h2 { 
+      font-family: $primaryFont;
+      font-weight: bolder;
+      font-size: 30px;
+      margin-top: 10vh;
+      margin-bottom: 3vh;
+   }
+   p { 
+      font-family: $primaryFont;
+      font-weight: 400px;
+      font-size: 1em;
+      line-height: 2em;
+   }
+   .articles { 
+      display: flex;
+      margin-top: 40px;
+      .article1, 
+      .article2, 
+      .article3 { 
+         max-width: 30%;
+         display: flex;
+         flex-direction: column;
+         background-color: $lightGreyColour;
+         border-radius: 5%;
+         padding-left: 15px;
+         padding-right: 15px;
+         padding-bottom: 20px;
+         margin: 10px;
+         margin-bottom: 12vh;
+      }
+      span { 
+         color: $greenColour;
+         font-size: 1em;
+      }
+      p { 
+         font-family: $primaryFont;
+         font-weight: 400px;
+         font-size: 1em; 
+         line-height: 1.5em; 
+      }
+      h3 { 
+         font-family: $primaryFont;
+         font-weight: 400px;
+         font-size: 1.5em;
+      }
+      span, 
+      p, 
+      h3 { 
+         text-align: left;
+         padding: 3px;
+      }
+      img { 
+         padding-top: 30px;
+      }
+   }
+}
+
+// Styling Footer Section 
+footer { 
+   background-image: url(../assets/footer.jpg);
+   background-size: cover;
+   background-position-y: top;
+   padding: 10vh;
+   font-size:15px;
+   .footerFlexParent { 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .proniaInfo { 
+         display: flex;
+         flex-direction: column;
+         max-width: 20%;
+         img { 
+            width: 100px; 
+            height: 50px;
+            margin: 15px;
+         }
+         p { 
+            font-family: $primaryFont;
+            font-size: 1em;
+            line-height: 20px;
+            margin-bottom: 15px;;
+         }
+         .contactIcons { 
+            display: flex;
+         }
+            .contactIcons img { 
+               width: 30px;
+               height: 30px;
+               border: solid 1px black;
+               padding: 8px;
+               margin: 5px;
+            }
+      }
+      .usefulLinks, 
+      .myAccount, 
+      .ourService, 
+      .gotAQuestion { 
+         font-family: $primaryFont;
+         font-size: 1em;
+         margin: 20px;
+         h4 { 
+            padding-bottom: 25px;
+         }
+         a { 
+            line-height: 2em;
+            color: black;
+         }
+      }
+      .gotAQuestion { 
+         min-width: 25%;
+      }
+   }
+}
+

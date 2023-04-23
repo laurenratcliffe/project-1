@@ -377,16 +377,201 @@ header .headerImage img {
   font-size: 40px;
   padding-bottom: 30px;
 }
+.ourProducts h2:before,
+.ourProducts h2:after {
+  content: " ";
+  text-decoration: line-through;
+}
 .ourProducts button {
   background-color: white;
   color: #abd373;
   padding: 10px 20px;
   border-style: solid;
   border-color: lightgray;
+  border-width: 1px;
   border-radius: 5%;
   margin: 15px;
 }
 .ourProducts button:hover {
   border-color: #abd373;
   border-style: dotted;
+}
+
+.plantInventory {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.plantInventory img {
+  width: 200px;
+  height: 200px;
+}
+.plantInventory .plantForSale {
+  display: flex;
+  flex-direction: column;
+}
+.plantInventory .plantForSale .plantInfo img {
+  width: 30px;
+  height: 30px;
+  border: solid 1px lightgray;
+}
+
+.newCollections {
+  margin-top: 10vh;
+  height: 60vh;
+}
+.newCollections .collectionsTop {
+  display: flex;
+  margin: 10px;
+}
+.newCollections .collectionsTop .cactusCollection {
+  background-image: url(../assets/b1.jpeg);
+  min-width: 42vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.newCollections .collectionsTop .plantPort {
+  background-image: url(../assets/b2.jpeg);
+  min-width: 30vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.newCollections .collectionsBottom {
+  display: flex;
+  margin: 10px;
+}
+.newCollections .collectionsBottom .plantPort2 {
+  background-image: url(../assets/b3.jpeg);
+  min-width: 20vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.newCollections .collectionsBottom .hangingCollection {
+  background-image: url(../assets/b4.jpeg);
+  min-width: 40vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.latestPosts {
+  text-align: center;
+  font-size: 15px;
+}
+.latestPosts h2 {
+  font-family: Rubik, sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
+  margin-top: 10vh;
+  margin-bottom: 3vh;
+}
+.latestPosts p {
+  font-family: Rubik, sans-serif;
+  font-weight: 400px;
+  font-size: 1em;
+  line-height: 2em;
+}
+.latestPosts .articles {
+  display: flex;
+  margin-top: 40px;
+}
+.latestPosts .articles .article1,
+.latestPosts .articles .article2,
+.latestPosts .articles .article3 {
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f6f7fb;
+  border-radius: 5%;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  margin: 10px;
+  margin-bottom: 12vh;
+}
+.latestPosts .articles span {
+  color: #abd373;
+  font-size: 1em;
+}
+.latestPosts .articles p {
+  font-family: Rubik, sans-serif;
+  font-weight: 400px;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.latestPosts .articles h3 {
+  font-family: Rubik, sans-serif;
+  font-weight: 400px;
+  font-size: 1.5em;
+}
+.latestPosts .articles span,
+.latestPosts .articles p,
+.latestPosts .articles h3 {
+  text-align: left;
+  padding: 3px;
+}
+.latestPosts .articles img {
+  padding-top: 30px;
+}
+
+footer {
+  background-image: url(../assets/footer.jpg);
+  background-size: cover;
+  background-position-y: top;
+  padding: 10vh;
+  font-size: 15px;
+}
+footer .footerFlexParent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+footer .footerFlexParent .proniaInfo {
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+}
+footer .footerFlexParent .proniaInfo img {
+  width: 100px;
+  height: 50px;
+  margin: 15px;
+}
+footer .footerFlexParent .proniaInfo p {
+  font-family: Rubik, sans-serif;
+  font-size: 1em;
+  line-height: 20px;
+  margin-bottom: 15px;
+}
+footer .footerFlexParent .proniaInfo .contactIcons {
+  display: flex;
+}
+footer .footerFlexParent .proniaInfo .contactIcons img {
+  width: 30px;
+  height: 30px;
+  border: solid 1px black;
+  padding: 8px;
+  margin: 5px;
+}
+footer .footerFlexParent .usefulLinks,
+footer .footerFlexParent .myAccount,
+footer .footerFlexParent .ourService,
+footer .footerFlexParent .gotAQuestion {
+  font-family: Rubik, sans-serif;
+  font-size: 1em;
+  margin: 20px;
+}
+footer .footerFlexParent .usefulLinks h4,
+footer .footerFlexParent .myAccount h4,
+footer .footerFlexParent .ourService h4,
+footer .footerFlexParent .gotAQuestion h4 {
+  padding-bottom: 25px;
+}
+footer .footerFlexParent .usefulLinks a,
+footer .footerFlexParent .myAccount a,
+footer .footerFlexParent .ourService a,
+footer .footerFlexParent .gotAQuestion a {
+  line-height: 2em;
+  color: black;
+}
+footer .footerFlexParent .gotAQuestion {
+  min-width: 25%;
 }
