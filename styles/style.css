@@ -418,39 +418,69 @@ header .headerImage img {
 
 .newCollections {
   margin-top: 10vh;
-  height: 60vh;
+  font-family: Rubik, sans-serif;
+}
+.newCollections h4 {
+  font-size: 1em;
+  font-weight: normal;
+}
+.newCollections h3 {
+  font-size: 2em;
+  font-weight: bolder;
 }
 .newCollections .collectionsTop {
   display: flex;
-  margin: 10px;
 }
 .newCollections .collectionsTop .cactusCollection {
   background-image: url(../assets/b1.jpeg);
-  min-width: 42vw;
-  background-size: contain;
+  min-width: 70%;
+  min-height: 35vh;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.newCollections .collectionsTop .cactusCollection h4,
+.newCollections .collectionsTop .cactusCollection h3 {
+  text-align: left;
+  margin: 30px;
 }
 .newCollections .collectionsTop .plantPort {
   background-image: url(../assets/b2.jpeg);
-  min-width: 30vw;
-  background-size: contain;
+  min-width: 30%;
+  min-height: 35vh;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.newCollections .collectionsTop .plantPort h4,
+.newCollections .collectionsTop .plantPort h3 {
+  text-align: center;
+  margin: 30px;
 }
 .newCollections .collectionsBottom {
   display: flex;
-  margin: 10px;
 }
 .newCollections .collectionsBottom .plantPort2 {
   background-image: url(../assets/b3.jpeg);
-  min-width: 20vw;
-  background-size: contain;
+  min-width: 30%;
+  min-height: 35vh;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.newCollections .collectionsBottom .plantPort2 h4,
+.newCollections .collectionsBottom .plantPort2 h3 {
+  text-align: center;
+  margin: 30px;
 }
 .newCollections .collectionsBottom .hangingCollection {
   background-image: url(../assets/b4.jpeg);
-  min-width: 40vw;
-  background-size: contain;
+  min-width: 70%;
+  min-height: 35vh;
+  background-size: cover;
   background-repeat: no-repeat;
+}
+.newCollections .collectionsBottom .hangingCollection h4,
+.newCollections .collectionsBottom .hangingCollection h3 {
+  text-align: left;
+  margin: 30px;
 }
 
 .latestPosts {
@@ -651,4 +681,46 @@ footer .footerFlexParent .gotAQuestion {
   margin-left: 300px;
   margin-top: 100px;
   margin-bottom: 20px;
+}
+
+@media (max-width: 520px) {
+  .wrapper {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .banner {
+    flex-direction: column;
+  }
+  .headerParent {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+  }
+  .headerParent h2,
+  .headerParent h3,
+  .headerParent h4 {
+    min-width: 100%;
+  }
+  .headerParent img {
+    position: relative;
+    bottom: 150px;
+    z-index: -1;
+  }
+  .servicesParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  img {
+    padding-right: 20px;
+  }
+  .articles {
+    flex-direction: column;
+  }
+  .articles .article1,
+  .articles .article2,
+  .articles .article3 {
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
 }

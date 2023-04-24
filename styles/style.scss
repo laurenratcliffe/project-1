@@ -227,41 +227,70 @@ header {
 // Styling Collection Posts Section 
 .newCollections { 
    margin-top: 10vh;
-   height: 60vh;
+   font-family: $primaryFont;
+   h4 {
+      font-size: 1em;
+      font-weight: normal;
+   }
+   h3 { 
+      font-size: 2em;
+      font-weight: bolder;
+   }
    .collectionsTop{ 
       display: flex;
-      margin: 10px;
+
       .cactusCollection { 
          background-image: url(../assets/b1.jpeg);
-         min-width: 42vw;
-         // min-height: 20vh;
-         background-size: contain;
+         min-width: 70%;
+         min-height: 35vh;
+         background-size: cover;
          background-repeat: no-repeat;
+         h4, 
+         h3 { 
+            text-align: left;
+            margin: 30px;
+         }
+
       }
       .plantPort { 
          background-image: url(../assets/b2.jpeg);
-         min-width: 30vw;
-         // min-height: 30vh;
-         background-size: contain;
+         min-width: 30%;
+         min-height: 35vh;
+         background-size: cover;
          background-repeat: no-repeat;
+         h4, 
+         h3 { 
+            text-align: center;
+            margin: 30px; 
+         }
       }
    }
    .collectionsBottom { 
       display: flex;
-      margin: 10px;
+      
       .plantPort2 { 
          background-image: url(../assets/b3.jpeg);
-         min-width: 20vw;
-         // min-height: 30vh;
-         background-size: contain;
+         min-width: 30%;
+         min-height: 35vh;
+         background-size: cover;
          background-repeat: no-repeat;
+         h4, 
+         h3 { 
+            text-align: center;
+            margin: 30px;
+         }
       }
       .hangingCollection { 
          background-image: url(../assets/b4.jpeg);
-         min-width: 40vw;
-         // min-height: 30vh;
-         background-size: contain;
+         min-width: 70%;
+         min-height: 35vh;
+         background-size: cover;
          background-repeat: no-repeat;
+         h4, 
+         h3 { 
+            text-align: left;
+            margin: 30px;
+         }
       }
    }
 }
@@ -469,9 +498,62 @@ footer {
          margin-top: 100px;
          margin-bottom: 20px;
       }
-      
-   
    }
-  
+}
+
+// Media Queries 
+
+@media (max-width: 520px){
+.wrapper {
+   margin-left: 5vw;
+   margin-right: 5vw;
+   }
+
+.banner {
+   flex-direction: column;
+ }
+ 
+ .headerParent { 
+   flex-direction: column;
+   align-items: center;
+   padding: 25px;
+   h2, 
+   h3, 
+   h4 {
+     min-width: 100%; 
+   }
+   img {
+      position: relative;
+      bottom: 150px;
+      z-index: -1;
+    }
+ }
+
+ .servicesParent { 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   }
+   img { 
+      padding-right: 20px;
+   }
+ 
+.articles { 
+   flex-direction: column;
+   .article1,
+   .article2,
+   .article3 {
+   min-width: 100%;
+   margin-bottom: 15px;
+   }
+}
+
+
+
+
+
+
+
 
 }
+ 
