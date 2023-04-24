@@ -575,3 +575,80 @@ footer .footerFlexParent .gotAQuestion a {
 footer .footerFlexParent .gotAQuestion {
   min-width: 25%;
 }
+
+.contactHeader {
+  background-color: white;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/contact-header.jpg);
+}
+.contactHeader h1 {
+  position: relative;
+  top: 45%;
+  left: 45%;
+  font-family: Rubik, sans-serif;
+}
+
+.proniaForm {
+  min-height: 300px;
+  display: flex;
+  margin: 10vh 25vw 10vh 25vw;
+  border: solid 2px #f6f7fb;
+  font-size: 10px;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+}
+.proniaForm .formInstructions {
+  background-image: url(../assets/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 30px 20px;
+  text-align: left;
+}
+.proniaForm .formInstructions h4 {
+  font-size: 2em;
+  font-family: Rubik, sans-serif;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+.proniaForm .formInstructions h3 {
+  font-size: 1em;
+  font-family: Rubik, sans-serif;
+  padding-bottom: 10px;
+}
+.proniaForm .formInstructions p {
+  font-size: 1em;
+  font-family: Rubik, sans-serif;
+  line-height: 25px;
+}
+.proniaForm .formInput #firstName,
+.proniaForm .formInput #lastName,
+.proniaForm .formInput #phone,
+.proniaForm .formInput #email,
+.proniaForm .formInput #message {
+  width: 40%;
+  flex-wrap: wrap;
+  border: none;
+  border-bottom: solid #f6f7fb 1px;
+  padding: 5px;
+  padding-top: 20px;
+  margin: 10px;
+}
+.proniaForm .formInput #message {
+  padding-bottom: 50px;
+  min-width: 90%;
+}
+.proniaForm .formInput button {
+  background-color: #abd373;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 100px;
+  height: 30px;
+  display: block;
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
