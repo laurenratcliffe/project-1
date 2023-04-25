@@ -576,32 +576,28 @@ footer {
 }
 
 // Media Queries 
-
+// General Styling
 @media (max-width: 600px){
 .wrapper {
    margin-left: 5vw;
    margin-right: 5vw;
    }
 
+   // Banner Media Query
 .banner {
    flex-direction: column;
  }
- 
+
+//  Header Media Query
  .headerParent { 
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   margin: 0;
    .headerText { 
       line-height: 5vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      // position: relative;
-      // top: 10vh;
-      // right: 10vw;
-      // margin-right: 40vw;
-      // margin-left: 40vw;
       h2 { 
          font-size: 2em;
       }
@@ -613,38 +609,90 @@ footer {
       }
    }
    .headerImage img { 
-     width: 70vw;
-     height: 50vh;
-     margin: 25%;
-   }
+     display: none;
  }
-
+ }
+//  Services Media Query
  .servicesParent { 
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
+   margin: 0;
    }
    img { 
       padding-right: 20px;
+      padding-top: 20px;
    }
  
+// Article Section Media Query
 .articles { 
    flex-direction: column;
    .article1,
    .article2,
    .article3 {
    min-width: 100%;
-   margin-bottom: 15px;
+   margin-bottom: 0px;
    }
 }
-.newCollections { 
-   display: block;
+
+.collectionsTop { 
+   display: flex; 
+   flex-direction: column;
 }
 
+.collectionsBottom { 
+   display: flex; 
+   flex-direction: column-reverse;
 }
+
+// Footer Media Query
+footer { 
+   .footerFlexParent { 
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      .proniaInfo { 
+         flex-direction: column;
+         align-items: center;
+         min-width: 90vw;
+         // span, 
+         // p { 
+         //    display: none;
+         // }
+      }
+   }
+   .contactIcons {
+      flex-direction: row;
+   }
+   .usefulLinks, 
+   .myAccount, 
+   .ourService, { 
+      min-width: 90vw;
+      h4 { 
+         position: relative;
+         left: 37%
+      }
+      a { 
+         padding: 2px;
+         position: relative;
+      }
+   }
+   .gotAQuestion { 
+      min-width: 90vw;
+   }
+}
+
+
+}
+
+
  
-@media (max-width: 1200px) { 
-.footerFlexParent { 
-   display: block;
-}
-}
+
+
+
+// @media (max-width: 1200px) { 
+// .footerFlexParent { 
+//    display: block;
+// }
+// }
