@@ -621,7 +621,7 @@ footer {
   background-image: url(../assets/footer.jpg);
   background-size: cover;
   background-position-y: top;
-  padding: 10vh;
+  padding: 5vh;
   font-size: 15px;
 }
 footer .footerFlexParent {
@@ -842,28 +842,50 @@ footer .footerFlexParent .gotAQuestion {
   footer .footerFlexParent .proniaInfo {
     flex-direction: column;
     align-items: center;
-    min-width: 90vw;
+    min-width: 80vw;
   }
-  footer .contactIcons {
+  footer .footerFlexParent .proniaInfo p {
+    text-align: center;
+  }
+  footer .footerFlexParent .usefulLinks,
+  footer .footerFlexParent .myAccount,
+  footer .footerFlexParent .ourService,
+  footer .footerFlexParent .gotAQuestion {
+    margin: 5px;
+    text-align: center;
+  }
+  footer .footerFlexParent .usefulLinks h4,
+  footer .footerFlexParent .myAccount h4,
+  footer .footerFlexParent .ourService h4,
+  footer .footerFlexParent .gotAQuestion h4 {
+    padding-bottom: 5px;
+  }
+  footer .footerFlexParent .usefulLinks a,
+  footer .footerFlexParent .myAccount a,
+  footer .footerFlexParent .ourService a,
+  footer .footerFlexParent .gotAQuestion a {
+    line-height: 1em;
+  }
+  footer .footerFlexParent .contactIcons {
     flex-direction: row;
   }
-  footer .usefulLinks,
-  footer .myAccount,
-  footer .ourService {
+  footer .footerFlexParent .usefulLinks,
+  footer .footerFlexParent .myAccount,
+  footer .footerFlexParent .ourService {
     min-width: 90vw;
+    display: flex;
+    justify-content: center;
   }
-  footer .usefulLinks h4,
-  footer .myAccount h4,
-  footer .ourService h4 {
-    position: relative;
-    left: 37%;
+  footer .footerFlexParent .usefulLinks h2,
+  footer .footerFlexParent .myAccount h2,
+  footer .footerFlexParent .ourService h2 {
+    line-height: 2px;
   }
-  footer .usefulLinks a,
-  footer .myAccount a,
-  footer .ourService a {
+  footer .footerFlexParent .usefulLinks a,
+  footer .footerFlexParent .myAccount a,
+  footer .footerFlexParent .ourService a {
+    align-self: row;
     display: none;
-    padding: 2px;
-    position: relative;
   }
   .contactHeader h1 {
     display: flex;

@@ -441,7 +441,7 @@ footer {
    background-image: url(../assets/footer.jpg);
    background-size: cover;
    background-position-y: top;
-   padding: 10vh;
+   padding: 5vh;
    font-size:15px;
    .footerFlexParent { 
       display: flex;
@@ -675,9 +675,28 @@ footer {
          .proniaInfo { 
             flex-direction: column;
             align-items: center;
-            min-width: 90vw;
+            min-width: 80vw;
+         
+            p { 
+               text-align: center;
+            }
+           
+         }
+      .usefulLinks, 
+      .myAccount, 
+      .ourService, 
+      .gotAQuestion { 
+         margin: 5px;
+         text-align: center;
+         h4 { 
+            padding-bottom: 5px;
+         }
+         a { 
+            line-height: 1em;
+            
          }
        }
+      
       .contactIcons {
          flex-direction: row;
       }
@@ -685,19 +704,24 @@ footer {
       .myAccount, 
       .ourService, { 
          min-width: 90vw;
-         h4 { 
-            position: relative;
-            left: 37%
+         display: flex;
+         justify-content: center;
+         // h4 { 
+         //    text-align: center;
+         // }
+         h2 { 
+            line-height: 2px;
          }
          a { 
+            align-self: row;
             display: none;
-            padding: 2px;
-            position: relative;
+            // padding: 2px;
+            // position: relative;
          }
       // changed display to none for the links for the purpose of visualization of the website. Ideally I would implement a drop down menu 
       }
    }
- 
+}
 
 // Contact Page Query
    .contactHeader h1 { 
