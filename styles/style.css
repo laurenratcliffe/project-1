@@ -243,29 +243,6 @@ li {
   margin-right: 15vw;
 }
 
-.banner {
-  background-color: #abd373;
-  color: white;
-  padding: 10px 0;
-  font-size: 12px;
-}
-.banner .bannerParent {
-  font-family: rubik;
-  display: flex;
-  justify-content: row;
-  justify-content: space-between;
-}
-.banner .bannerButtons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 0 5px;
-}
-.banner .bannerParent a {
-  color: white;
-  padding: 5px;
-}
-
 nav {
   height: 12vh;
 }
@@ -292,6 +269,29 @@ nav .navParent .logo img {
 nav .navParent .shoppingCart img {
   height: 30px;
   width: 30px;
+}
+
+.banner {
+  background-color: #abd373;
+  color: white;
+  padding: 10px 0;
+  font-size: 12px;
+}
+.banner .bannerParent {
+  font-family: rubik;
+  display: flex;
+  justify-content: row;
+  justify-content: space-between;
+}
+.banner .bannerButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+.banner .bannerParent a {
+  color: white;
+  padding: 5px;
 }
 
 header {
@@ -576,6 +576,7 @@ header .headerImage img {
 }
 .latestPosts .articles {
   display: flex;
+  justify-content: center;
   margin-top: 40px;
 }
 .latestPosts .articles .article1,
@@ -760,7 +761,39 @@ footer .footerFlexParent .gotAQuestion {
   justify-content: flex-end;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+  .servicesParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 5vw;
+    min-width: 90vw;
+  }
+  img {
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  .headerParent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerParent .headerText {
+    line-height: 5vh;
+    padding-bottom: 0;
+  }
+  .headerParent .headerText h2 {
+    font-size: 1.5em;
+  }
+  .headerParent .headerText h3 {
+    font-size: 2em;
+  }
+  .headerParent .headerText h4 {
+    font-size: 0.5em;
+  }
+}
+@media (max-width: 500px) {
   .wrapper {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -775,9 +808,6 @@ footer .footerFlexParent .gotAQuestion {
   }
   .headerParent .headerText {
     line-height: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .headerParent .headerText h2 {
     font-size: 2em;
@@ -789,32 +819,20 @@ footer .footerFlexParent .gotAQuestion {
     font-size: 1em;
   }
   .headerParent .headerImage img {
-    display: none;
+    width: 250px;
+    height: 350px;
   }
   .servicesParent {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 5vw;
     margin: 0;
     min-width: 90vw;
   }
-  img {
+  .servicesParent img {
     padding-right: 20px;
     padding-top: 20px;
-  }
-  .articles {
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
-  .articles .article1,
-  .articles .article2,
-  .articles .article3 {
-    min-width: 100%;
-  }
-  .articles .latestPosts .article1,
-  .articles .article2,
-  .articles .article3 {
-    margin: 0;
   }
   .newCollections {
     margin: 0;
@@ -830,6 +848,20 @@ footer .footerFlexParent .gotAQuestion {
   .collectionsBottom {
     display: flex;
     flex-direction: column-reverse;
+  }
+  .articles {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  .articles .article1,
+  .articles .article2,
+  .articles .article3 {
+    min-width: 100%;
+  }
+  .articles .latestPosts .article1,
+  .articles .article2,
+  .articles .article3 {
+    margin: 0;
   }
   footer {
     padding: 2vh;
@@ -847,43 +879,43 @@ footer .footerFlexParent .gotAQuestion {
   footer .footerFlexParent .proniaInfo p {
     text-align: center;
   }
-  footer .footerFlexParent .usefulLinks,
-  footer .footerFlexParent .myAccount,
-  footer .footerFlexParent .ourService,
-  footer .footerFlexParent .gotAQuestion {
+  footer .usefulLinks,
+  footer .myAccount,
+  footer .ourService,
+  footer .gotAQuestion {
     margin: 5px;
     text-align: center;
   }
-  footer .footerFlexParent .usefulLinks h4,
-  footer .footerFlexParent .myAccount h4,
-  footer .footerFlexParent .ourService h4,
-  footer .footerFlexParent .gotAQuestion h4 {
+  footer .usefulLinks h4,
+  footer .myAccount h4,
+  footer .ourService h4,
+  footer .gotAQuestion h4 {
     padding-bottom: 5px;
   }
-  footer .footerFlexParent .usefulLinks a,
-  footer .footerFlexParent .myAccount a,
-  footer .footerFlexParent .ourService a,
-  footer .footerFlexParent .gotAQuestion a {
+  footer .usefulLinks a,
+  footer .myAccount a,
+  footer .ourService a,
+  footer .gotAQuestion a {
     line-height: 1em;
   }
-  footer .footerFlexParent .contactIcons {
+  footer .contactIcons {
     flex-direction: row;
   }
-  footer .footerFlexParent .usefulLinks,
-  footer .footerFlexParent .myAccount,
-  footer .footerFlexParent .ourService {
+  footer .usefulLinks,
+  footer .myAccount,
+  footer .ourService {
     min-width: 90vw;
     display: flex;
     justify-content: center;
   }
-  footer .footerFlexParent .usefulLinks h2,
-  footer .footerFlexParent .myAccount h2,
-  footer .footerFlexParent .ourService h2 {
+  footer .usefulLinks h2,
+  footer .myAccount h2,
+  footer .ourService h2 {
     line-height: 2px;
   }
-  footer .footerFlexParent .usefulLinks a,
-  footer .footerFlexParent .myAccount a,
-  footer .footerFlexParent .ourService a {
+  footer .usefulLinks a,
+  footer .myAccount a,
+  footer .ourService a {
     align-self: row;
     display: none;
   }
@@ -908,5 +940,34 @@ footer .footerFlexParent .gotAQuestion {
     flex-direction: column;
     justify-content: center;
     max-width: 70vw;
+  }
+}
+@media (max-width: 1200px) {
+  .headerParent {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .headerParent .headerText {
+    line-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 15%;
+    padding-right: 0;
+  }
+  .headerParent .headerText h2 {
+    font-size: 2em;
+  }
+  .headerParent .headerText h3 {
+    font-size: 3em;
+  }
+  .headerParent .headerText h4 {
+    font-size: 1em;
+  }
+  .headerParent .headerImage img {
+    width: 250px;
+    height: 350px;
   }
 }
