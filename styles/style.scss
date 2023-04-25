@@ -407,7 +407,7 @@ header {
          padding-right: 25px;
          padding-bottom: 30px;
          margin: 10px;
-         margin-bottom: 12vh;
+         margin-bottom: 5vh;
       }
       span { 
          color: $greenColour;
@@ -702,13 +702,11 @@ footer {
       }
       .usefulLinks, 
       .myAccount, 
-      .ourService, { 
+      .ourService { 
          min-width: 90vw;
          display: flex;
          justify-content: center;
-         // h4 { 
-         //    text-align: center;
-         // }
+         
          h2 { 
             line-height: 2px;
          }
