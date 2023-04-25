@@ -242,6 +242,7 @@ li {
   background-color: #abd373;
   color: white;
   padding: 10px 0;
+  font-size: 12px;
 }
 .banner .bannerParent {
   font-family: rubik;
@@ -292,29 +293,33 @@ header {
   background-color: #F8EEE5;
   height: 80vh;
   width: 100vw;
+  text-size: 15px;
+  display: flex;
+  align-items: center;
 }
 header .headerParent {
   display: flex;
-  padding: 15vh 0;
 }
 header .headerText {
   display: flex;
   flex-direction: column;
-  width: 30vw;
+  justify-content: center;
+  min-width: 40vw;
+  line-height: 70px;
 }
 header .headerText h2 {
   font-family: Rubik, sans-serif;
-  font-size: 50px;
+  font-size: 3em;
   font-weight: lighter;
 }
 header .headerText h3 {
   font-family: Rubik, sans-serif;
-  font-size: 65px;
+  font-size: 5em;
   font-weight: 300px;
 }
 header .headerText h4 {
   font-family: Rubik, sans-serif;
-  font-size: 20px;
+  font-size: 1em;
   font-weight: normal;
   padding-bottom: 50px;
 }
@@ -377,18 +382,13 @@ header .headerImage img {
   font-size: 40px;
   padding-bottom: 30px;
 }
-.ourProducts h2:before,
-.ourProducts h2:after {
-  content: " ";
-  text-decoration: line-through;
-}
 .ourProducts button {
   background-color: white;
   color: #abd373;
   padding: 10px 20px;
   border-style: solid;
-  border-color: lightgray;
-  border-width: 1px;
+  border-color: #f6f7fb;
+  border-width: 2px;
   border-radius: 5%;
   margin: 15px;
 }
@@ -400,20 +400,30 @@ header .headerImage img {
 .plantInventory {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
 }
 .plantInventory img {
-  width: 200px;
-  height: 200px;
+  width: 225px;
+  height: 225px;
 }
 .plantInventory .plantForSale {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .plantInventory .plantForSale .plantInfo img {
   width: 30px;
   height: 30px;
-  border: solid 1px lightgray;
+  padding: 7px;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+}
+.plantInventory .plantForSale .plantInfo p {
+  font-family: Rubik, sans-serif;
+  font-size: 1em;
+}
+.plantInventory .plantForSale .plantInfo span {
+  color: #abd373;
 }
 
 .newCollections {
@@ -433,54 +443,110 @@ header .headerImage img {
 }
 .newCollections .collectionsTop .cactusCollection {
   background-image: url(../assets/b1.jpeg);
+  margin: 1%;
   min-width: 70%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  padding: 40px;
 }
 .newCollections .collectionsTop .cactusCollection h4,
 .newCollections .collectionsTop .cactusCollection h3 {
   text-align: left;
-  margin: 30px;
+}
+.newCollections .collectionsTop .cactusCollection button {
+  background-color: #abd373;
+  border: none;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 10px;
 }
 .newCollections .collectionsTop .plantPort {
   background-image: url(../assets/b2.jpeg);
+  margin: 1%;
   min-width: 30%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  line-height: 40px;
 }
 .newCollections .collectionsTop .plantPort h4,
 .newCollections .collectionsTop .plantPort h3 {
   text-align: center;
-  margin: 30px;
+}
+.newCollections .collectionsTop .plantPort button {
+  background-color: #abd373;
+  border: none;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 10px;
 }
 .newCollections .collectionsBottom {
   display: flex;
 }
 .newCollections .collectionsBottom .plantPort2 {
   background-image: url(../assets/b3.jpeg);
+  margin: 1%;
   min-width: 30%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  line-height: 40px;
 }
 .newCollections .collectionsBottom .plantPort2 h4,
 .newCollections .collectionsBottom .plantPort2 h3 {
   text-align: center;
-  margin: 30px;
+}
+.newCollections .collectionsBottom .plantPort2 button {
+  background-color: #abd373;
+  border: none;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  position: relative;
+  margin-top: 10px;
 }
 .newCollections .collectionsBottom .hangingCollection {
   background-image: url(../assets/b4.jpeg);
+  margin: 1%;
   min-width: 70%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  line-height: 50px;
+  padding: 30px;
 }
 .newCollections .collectionsBottom .hangingCollection h4,
 .newCollections .collectionsBottom .hangingCollection h3 {
   text-align: left;
-  margin: 30px;
+}
+.newCollections .collectionsBottom .hangingCollection button {
+  background-color: #abd373;
+  border: none;
+  color: white;
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  margin-top: 10px;
 }
 
 .latestPosts {
@@ -558,6 +624,7 @@ footer .footerFlexParent {
 footer .footerFlexParent .proniaInfo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   max-width: 20%;
 }
 footer .footerFlexParent .proniaInfo img {
@@ -683,7 +750,7 @@ footer .footerFlexParent .gotAQuestion {
   margin-bottom: 20px;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 600px) {
   .wrapper {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -693,18 +760,29 @@ footer .footerFlexParent .gotAQuestion {
   }
   .headerParent {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 25px;
+    margin: 0;
   }
-  .headerParent h2,
-  .headerParent h3,
-  .headerParent h4 {
-    min-width: 100%;
+  .headerParent .headerText {
+    line-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  .headerParent img {
-    position: relative;
-    bottom: 150px;
-    z-index: -1;
+  .headerParent .headerText h2 {
+    font-size: 2em;
+  }
+  .headerParent .headerText h3 {
+    font-size: 3em;
+  }
+  .headerParent .headerText h4 {
+    font-size: 1em;
+  }
+  .headerParent .headerImage img {
+    width: 70vw;
+    height: 50vh;
+    margin: 25%;
   }
   .servicesParent {
     display: flex;
@@ -722,5 +800,13 @@ footer .footerFlexParent .gotAQuestion {
   .articles .article3 {
     min-width: 100%;
     margin-bottom: 15px;
+  }
+  .newCollections {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .footerFlexParent {
+    display: block;
   }
 }
