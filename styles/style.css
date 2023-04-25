@@ -870,11 +870,15 @@ footer .footerFlexParent .gotAQuestion {
     align-items: center;
   }
   .contactHeader h1 .proniaForm {
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5%;
+    margin: 0;
     min-width: 70vw;
   }
   .contactHeader h1 .proniaForm .formInstructions {
