@@ -225,6 +225,11 @@ html {
   margin: 0;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -400,6 +405,7 @@ header .headerImage img {
 .plantInventory {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1000px;
   gap: 20px;
   justify-content: center;
 }
@@ -440,11 +446,12 @@ header .headerImage img {
 }
 .newCollections .collectionsTop {
   display: flex;
+  max-width: 70vw;
 }
 .newCollections .collectionsTop .cactusCollection {
   background-image: url(../assets/b1.jpeg);
   margin: 1%;
-  min-width: 70%;
+  min-width: 65%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -469,7 +476,7 @@ header .headerImage img {
 .newCollections .collectionsTop .plantPort {
   background-image: url(../assets/b2.jpeg);
   margin: 1%;
-  min-width: 30%;
+  min-width: 25%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -495,11 +502,12 @@ header .headerImage img {
 }
 .newCollections .collectionsBottom {
   display: flex;
+  max-width: 70vw;
 }
 .newCollections .collectionsBottom .plantPort2 {
   background-image: url(../assets/b3.jpeg);
   margin: 1%;
-  min-width: 30%;
+  min-width: 25%;
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
@@ -526,8 +534,8 @@ header .headerImage img {
 .newCollections .collectionsBottom .hangingCollection {
   background-image: url(../assets/b4.jpeg);
   margin: 1%;
-  min-width: 70%;
-  min-height: 35vh;
+  min-width: 65%;
+  min-height: 25vh;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -578,9 +586,9 @@ header .headerImage img {
   flex-direction: column;
   background-color: #f6f7fb;
   border-radius: 5%;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 30px;
   margin: 10px;
   margin-bottom: 12vh;
 }
@@ -626,6 +634,7 @@ footer .footerFlexParent .proniaInfo {
   flex-direction: column;
   justify-content: center;
   max-width: 20%;
+  margin: 30px;
 }
 footer .footerFlexParent .proniaInfo img {
   width: 100px;
@@ -654,7 +663,7 @@ footer .footerFlexParent .ourService,
 footer .footerFlexParent .gotAQuestion {
   font-family: Rubik, sans-serif;
   font-size: 1em;
-  margin: 20px;
+  margin: 30px;
 }
 footer .footerFlexParent .usefulLinks h4,
 footer .footerFlexParent .myAccount h4,
@@ -678,11 +687,10 @@ footer .footerFlexParent .gotAQuestion {
   height: 40vh;
   background-size: cover;
   background-image: url(../assets/contact-header.jpg);
+  display: flex;
+  justify-content: center;
 }
 .contactHeader h1 {
-  position: relative;
-  top: 45%;
-  left: 45%;
   font-family: Rubik, sans-serif;
 }
 
@@ -744,10 +752,11 @@ footer .footerFlexParent .gotAQuestion {
   border-radius: 5%;
   width: 100px;
   height: 30px;
-  display: block;
-  margin-left: 300px;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  margin: 20px;
+}
+.proniaForm .formInput span {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 600px) {
@@ -786,6 +795,7 @@ footer .footerFlexParent .gotAQuestion {
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0;
+    min-width: 90vw;
   }
   img {
     padding-right: 20px;
@@ -793,12 +803,24 @@ footer .footerFlexParent .gotAQuestion {
   }
   .articles {
     flex-direction: column;
+    margin-bottom: 10px;
   }
   .articles .article1,
   .articles .article2,
   .articles .article3 {
     min-width: 100%;
-    margin-bottom: 0px;
+  }
+  .articles .latestPosts .article1,
+  .articles .article2,
+  .articles .article3 {
+    margin: 0;
+  }
+  .newCollections {
+    margin: 0;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .collectionsTop {
     display: flex;
@@ -807,6 +829,9 @@ footer .footerFlexParent .gotAQuestion {
   .collectionsBottom {
     display: flex;
     flex-direction: column-reverse;
+  }
+  footer {
+    padding: 2vh;
   }
   footer .footerFlexParent {
     flex-direction: column;
@@ -835,10 +860,32 @@ footer .footerFlexParent .gotAQuestion {
   footer .usefulLinks a,
   footer .myAccount a,
   footer .ourService a {
+    display: none;
     padding: 2px;
     position: relative;
   }
-  footer .gotAQuestion {
-    min-width: 90vw;
+  .contactHeader h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactHeader h1 .proniaForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+    min-width: 70vw;
+  }
+  .contactHeader h1 .proniaForm .formInstructions {
+    flex-direction: column;
+    justify-content: center;
+    background-image: cover;
+    padding: 30px 100px;
+  }
+  .contactHeader h1 .proniaForm .formInput {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 70vw;
   }
 }

@@ -22,6 +22,10 @@ $secondaryFont: Rubik, sans-serif;
    margin: 0;
 }
 
+html,
+body { 
+   overflow-x: hidden;
+}
 a {
    text-decoration: none;
 }
@@ -180,7 +184,6 @@ header {
 
 // Styling Products Section 
 .ourProducts { 
-   // still require lines by "Our Products" 
    text-align: center; 
    h2 { 
       font-family: $primaryFont;
@@ -209,6 +212,7 @@ header {
 .plantInventory { 
    display: flex;
    flex-wrap: wrap;
+   max-width: 1000px;
    gap: 20px;
    justify-content: center;
    
@@ -227,7 +231,6 @@ header {
          box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
       }
       .plantInfo { 
-         
          p { 
             font-family: $primaryFont;
             font-size: 1em;
@@ -253,11 +256,11 @@ header {
    }
    .collectionsTop{ 
       display: flex;
-
+      max-width: 70vw;
       .cactusCollection { 
          background-image: url(../assets/b1.jpeg);
          margin: 1%;
-         min-width: 70%;
+         min-width: 65%;
          min-height: 35vh;
          background-size: cover;
          background-repeat: no-repeat;
@@ -283,7 +286,7 @@ header {
       .plantPort { 
          background-image: url(../assets/b2.jpeg);
          margin: 1%;
-         min-width: 30%;
+         min-width: 25%;
          min-height: 35vh;
          background-size: cover;
          background-repeat: no-repeat;
@@ -310,11 +313,11 @@ header {
    }
    .collectionsBottom { 
       display: flex;
-      
+      max-width: 70vw;
       .plantPort2 { 
          background-image: url(../assets/b3.jpeg);
          margin: 1%;
-         min-width: 30%;
+         min-width: 25%;
          min-height: 35vh;
          background-size: cover;
          background-repeat: no-repeat;
@@ -342,8 +345,8 @@ header {
       .hangingCollection { 
          background-image: url(../assets/b4.jpeg);
          margin: 1%;
-         min-width: 70%;
-         min-height: 35vh;
+         min-width: 65%;
+         min-height: 25vh;
          background-size: cover;
          background-repeat: no-repeat;
          display: flex;
@@ -382,6 +385,7 @@ header {
       margin-top: 10vh;
       margin-bottom: 3vh;
    }
+
    p { 
       font-family: $primaryFont;
       font-weight: 400px;
@@ -399,9 +403,9 @@ header {
          flex-direction: column;
          background-color: $lightGreyColour;
          border-radius: 5%;
-         padding-left: 15px;
-         padding-right: 15px;
-         padding-bottom: 20px;
+         padding-left: 25px;
+         padding-right: 25px;
+         padding-bottom: 30px;
          margin: 10px;
          margin-bottom: 12vh;
       }
@@ -448,6 +452,7 @@ footer {
          flex-direction: column;
          justify-content: center;
          max-width: 20%;
+         margin: 30px;
          img { 
             width: 100px; 
             height: 50px;
@@ -476,7 +481,7 @@ footer {
       .gotAQuestion { 
          font-family: $primaryFont;
          font-size: 1em;
-         margin: 20px;
+         margin: 30px;
          h4 { 
             padding-bottom: 25px;
          }
@@ -498,12 +503,11 @@ footer {
 .contactHeader { 
    background-color: white;
    height: 40vh;
-    background-size: cover;
+   background-size: cover;
    background-image: url(../assets/contact-header.jpg);
+   display: flex;
+   justify-content: center;
    h1 { 
-      position: relative;
-      top: 45%;
-      left: 45%;
       font-family: $primaryFont;
    }
 }
@@ -567,10 +571,11 @@ footer {
          border-radius: 5%;
          width: 100px;
          height: 30px;
-         display: block;
-         margin-left: 300px;
-         margin-top: 100px;
-         margin-bottom: 20px;
+         margin: 20px;
+      }
+      span { 
+         display: flex;
+         justify-content: flex-end;
       }
    }
 }
@@ -610,14 +615,15 @@ footer {
    }
    .headerImage img { 
      display: none;
+   }
  }
- }
-//  Services Media Query
+//  Serv ices Media Query
  .servicesParent { 
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
    margin: 0;
+   min-width: 90vw;
    }
    img { 
       padding-right: 20px;
@@ -625,74 +631,99 @@ footer {
    }
  
 // Article Section Media Query
-.articles { 
-   flex-direction: column;
-   .article1,
-   .article2,
-   .article3 {
-   min-width: 100%;
-   margin-bottom: 0px;
+   .articles { 
+      flex-direction: column;
+      margin-bottom: 10px;
+      .article1,
+      .article2,
+      .article3 {
+      min-width: 100%;
+      }
+      .latestPosts .article1,
+      .article2,
+      .article3 {
+         margin: 0;
+      }
    }
-}
-
-.collectionsTop { 
-   display: flex; 
-   flex-direction: column;
-}
-
-.collectionsBottom { 
-   display: flex; 
-   flex-direction: column-reverse;
-}
-
-// Footer Media Query
-footer { 
-   .footerFlexParent { 
+// New Collections Media Query
+   .newCollections { 
+      margin: 0;
+      margin-top: 10vh;
+      display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      
-      .proniaInfo { 
+   }
+   .collectionsTop { 
+      display: flex; 
+      flex-direction: column;
+   }
+
+   .collectionsBottom { 
+      display: flex; 
+      flex-direction: column-reverse;
+   }
+
+// Footer Media Query
+   footer { 
+      padding: 2vh;
+      .footerFlexParent { 
          flex-direction: column;
          align-items: center;
+         justify-content: center;
+         
+         .proniaInfo { 
+            flex-direction: column;
+            align-items: center;
+            min-width: 90vw;
+         }
+       }
+      .contactIcons {
+         flex-direction: row;
+      }
+      .usefulLinks, 
+      .myAccount, 
+      .ourService, { 
          min-width: 90vw;
-         // span, 
-         // p { 
-         //    display: none;
-         // }
+         h4 { 
+            position: relative;
+            left: 37%
+         }
+         a { 
+            display: none;
+            padding: 2px;
+            position: relative;
+         }
+      // changed display to none for the links for the purpose of visualization of the website. Ideally I would implement a drop down menu 
       }
    }
-   .contactIcons {
-      flex-direction: row;
-   }
-   .usefulLinks, 
-   .myAccount, 
-   .ourService, { 
-      min-width: 90vw;
-      h4 { 
-         position: relative;
-         left: 37%
-      }
-      a { 
-         padding: 2px;
-         position: relative;
-      }
-   }
-   .gotAQuestion { 
-      min-width: 90vw;
-   }
-}
-
-
-}
-
-
  
 
+// Contact Page Query
+   .contactHeader h1 { 
+      display: flex; 
+      justify-content: center;
+      align-items: center;
+      .proniaForm { 
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         margin: 5%;
+         min-width: 70vw;
+         .formInstructions { 
+            flex-direction: column;
+            justify-content: center;
+            background-image: cover;
+            padding: 30px 100px;
+         }
+         .formInput { 
+            flex-direction: column;
+            justify-content: center;
+            max-width: 70vw;
+         }
+      }
+
+   }  
+}
 
 
-// @media (max-width: 1200px) { 
-// .footerFlexParent { 
-//    display: block;
-// }
-// }
