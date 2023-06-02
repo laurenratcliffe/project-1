@@ -15,6 +15,7 @@ $peachColour: #F8EEE5;
 $primaryFont: Rubik, sans-serif;
 $secondaryFont: Rubik, sans-serif;
 
+
 // banner styling
 .banner { 
    background-color: $greenColour; 
@@ -34,7 +35,7 @@ $secondaryFont: Rubik, sans-serif;
       padding: 0 5px;
    }
    .bannerParent a { 
-      color: white;
+      color: rgb(255, 255, 255);
       padding: 5px;
    }
 }
@@ -45,7 +46,7 @@ header {
    background-color: $peachColour;
    height: 80vh;
    width: 100vw;
-   text-size: 15px;
+   font-size: 15px;
    display: flex;
    align-items: center;
 
@@ -159,7 +160,7 @@ header {
 }
 
 // styling plants for sale section
-.plantInventory { 
+.plantInventory {
    display: flex;
    flex-wrap: wrap;
    max-width: 1000px;
@@ -174,7 +175,9 @@ header {
       display: flex; 
       flex-direction: column;
       align-items: center;
+
       .plantInfo img { 
+         border-radius: 25%;
          width: 30px; 
          height: 30px;
          padding: 7px;
@@ -218,7 +221,8 @@ header {
          display: flex;
          flex-direction: column;
          line-height: 50px;
-         padding: 40px;
+         padding: 30px;
+         margin-bottom: 5%;
          h4, 
          h3 { 
             text-align: left;
@@ -244,8 +248,9 @@ header {
          display: flex;
          flex-direction: column;
          align-items: center;
-         padding-top: 30px;
+         padding: 30px;
          line-height: 40px;
+         margin-bottom: 5%;
          h4, 
          h3 { 
             text-align: center;
@@ -277,6 +282,7 @@ header {
          align-items: center;
          padding-top: 30px;
          line-height: 40px;
+         margin-bottom: 5%;
          h4, 
          h3 { 
             text-align: center;
@@ -304,6 +310,7 @@ header {
          flex-direction: column;
          line-height: 50px;
          padding: 30px;
+         margin-bottom: 5%;
          h4, 
          h3 { 
             text-align: left;
@@ -446,7 +453,6 @@ footer {
 }
 
 
-// Styling Contact Page
 
 // Contact page header
 .contactHeader { 
@@ -532,6 +538,29 @@ footer {
 }
 
 // Media Query messed up my styling when I put it into the partial, so I kept it here.
+@media (max-width: 350px) {
+.mobileNav { 
+   ul {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border: solid 2px #abd373;
+      background-color: #abd373;
+      width: 40%;
+      position: relative;
+      left: 60%;
+      padding: 0;
+    }
+    
+    a {
+      color: black;
+      font-family: rubik;
+    }
+   }
+}  
+
+
+
 @media (max-width: 400px){
    // Service 350px
    .servicesParent { 
@@ -741,8 +770,8 @@ footer {
          line-height: 5vh;
          display: flex;
          flex-direction: column;
-         justify-content: center;
-         align-items: flex-end;
+         // justify-content: center;
+         // align-items: flex-end;
          padding-top: 15%;
          padding-right: 0;
          h2 { 
@@ -761,3 +790,53 @@ footer {
       }
    }
 }
+
+
+// May 9th Changes
+
+.navButtons a {
+  display: none;
+}
+
+
+.headerText {
+  max-width: 50%;
+  margin-right: 25%;
+}
+
+.newCollections .collectionsTop .cactusCollection {
+  /* margin: 1%; */
+  /* background-size: cover; */
+  background-size: auto;
+  background-position-x: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.newCollections .collectionsTop .plantPort {
+  /* padding-top: 30px; */
+  justify-content: center;
+  background-position-x: center;
+}
+
+.newCollections .collectionsBottom .hangingCollection {
+  background-position-x: 60%;
+}
+
+.newCollections .collectionsBottom .plantPort2 {
+  /* padding-top: 30px; */
+  align-items: center;
+  justify-content: center;
+}
+
+// footer .footerFlexParent .usefulLinks h4, footer .footerFlexParent .myAccount h4, footer .footerFlexParent .ourService h4, footer .footerFlexParent .gotAQuestion h4 {
+//   /* padding-bottom: 25px; */
+// }
+
+// @media (max-width: 400px) {
+//   img {
+//     /* padding-right: 20px; */
+//     /* padding-top: 20px; */
+//   }
+// }

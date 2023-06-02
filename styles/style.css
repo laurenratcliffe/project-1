@@ -270,6 +270,15 @@ nav .navParent .shoppingCart img {
   height: 30px;
   width: 30px;
 }
+nav .mobileNavBars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+nav .mobileNavBars p {
+  line-height: 5px;
+  width: 20px;
+}
 
 .banner {
   background-color: #abd373;
@@ -290,7 +299,7 @@ nav .navParent .shoppingCart img {
   padding: 0 5px;
 }
 .banner .bannerParent a {
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 5px;
 }
 
@@ -298,7 +307,7 @@ header {
   background-color: #F8EEE5;
   height: 80vh;
   width: 100vw;
-  text-size: 15px;
+  font-size: 15px;
   display: flex;
   align-items: center;
 }
@@ -419,6 +428,7 @@ header .headerImage img {
   align-items: center;
 }
 .plantInventory .plantForSale .plantInfo img {
+  border-radius: 25%;
   width: 30px;
   height: 30px;
   padding: 7px;
@@ -458,7 +468,8 @@ header .headerImage img {
   display: flex;
   flex-direction: column;
   line-height: 50px;
-  padding: 40px;
+  padding: 30px;
+  margin-bottom: 5%;
 }
 .newCollections .collectionsTop .cactusCollection h4,
 .newCollections .collectionsTop .cactusCollection h3 {
@@ -483,8 +494,9 @@ header .headerImage img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
+  padding: 30px;
   line-height: 40px;
+  margin-bottom: 5%;
 }
 .newCollections .collectionsTop .plantPort h4,
 .newCollections .collectionsTop .plantPort h3 {
@@ -516,6 +528,7 @@ header .headerImage img {
   align-items: center;
   padding-top: 30px;
   line-height: 40px;
+  margin-bottom: 5%;
 }
 .newCollections .collectionsBottom .plantPort2 h4,
 .newCollections .collectionsBottom .plantPort2 h3 {
@@ -542,6 +555,7 @@ header .headerImage img {
   flex-direction: column;
   line-height: 50px;
   padding: 30px;
+  margin-bottom: 5%;
 }
 .newCollections .collectionsBottom .hangingCollection h4,
 .newCollections .collectionsBottom .hangingCollection h3 {
@@ -761,6 +775,23 @@ footer .footerFlexParent .gotAQuestion {
   justify-content: flex-end;
 }
 
+@media (max-width: 350px) {
+  .mobileNav ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: solid 2px #abd373;
+    background-color: #abd373;
+    width: 40%;
+    position: relative;
+    left: 60%;
+    padding: 0;
+  }
+  .mobileNav a {
+    color: black;
+    font-family: rubik;
+  }
+}
 @media (max-width: 400px) {
   .servicesParent {
     display: flex;
@@ -952,8 +983,6 @@ footer .footerFlexParent .gotAQuestion {
     line-height: 5vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
     padding-top: 15%;
     padding-right: 0;
   }
@@ -970,4 +999,38 @@ footer .footerFlexParent .gotAQuestion {
     width: 250px;
     height: 350px;
   }
+}
+.navButtons a {
+  display: none;
+}
+
+.headerText {
+  max-width: 50%;
+  margin-right: 25%;
+}
+
+.newCollections .collectionsTop .cactusCollection {
+  /* margin: 1%; */
+  /* background-size: cover; */
+  background-size: auto;
+  background-position-x: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.newCollections .collectionsTop .plantPort {
+  /* padding-top: 30px; */
+  justify-content: center;
+  background-position-x: center;
+}
+
+.newCollections .collectionsBottom .hangingCollection {
+  background-position-x: 60%;
+}
+
+.newCollections .collectionsBottom .plantPort2 {
+  /* padding-top: 30px; */
+  align-items: center;
+  justify-content: center;
 }
