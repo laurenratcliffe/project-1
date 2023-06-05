@@ -1,6 +1,6 @@
 // Add Hamburger menu 
 // Add drop down menu 
-// Add checkout counting functionality
+// Add checkout functionality
 
 const navBar = document.querySelector('.mobileNav');
 const navClick = document.querySelector('.mobileNavBars');
