@@ -44,8 +44,7 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 b, strong {
@@ -215,8 +214,7 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -241,6 +239,10 @@ li {
 .wrapper {
   margin-left: 15vw;
   margin-right: 15vw;
+}
+
+img {
+  padding: 0;
 }
 
 nav {
@@ -278,6 +280,84 @@ nav .mobileNavBars {
 nav .mobileNavBars p {
   line-height: 5px;
   width: 20px;
+}
+
+.contactHeader {
+  background-color: white;
+  height: 40vh;
+  background-size: cover;
+  background-image: url(../assets/contact-header.jpg);
+  display: flex;
+  justify-content: center;
+}
+.contactHeader h1 {
+  font-family: Rubik, sans-serif;
+}
+
+.proniaForm {
+  min-height: 300px;
+  display: flex;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  border: solid 2px #f6f7fb;
+  font-size: 10px;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+}
+.proniaForm .formInstructions {
+  background-image: url(../assets/contact.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 30px 20px;
+  text-align: left;
+}
+.proniaForm .formInstructions h4 {
+  font-size: 2em;
+  font-family: Rubik, sans-serif;
+  line-height: 25px;
+  padding-bottom: 10px;
+}
+.proniaForm .formInstructions h3 {
+  font-size: 1em;
+  font-family: Rubik, sans-serif;
+  padding-bottom: 10px;
+}
+.proniaForm .formInstructions p {
+  font-size: 1em;
+  font-family: Rubik, sans-serif;
+  line-height: 25px;
+}
+.proniaForm .formInput #firstName,
+.proniaForm .formInput #lastName,
+.proniaForm .formInput #phone,
+.proniaForm .formInput #email,
+.proniaForm .formInput #message {
+  width: 40%;
+  flex-wrap: wrap;
+  border: none;
+  border-bottom: solid #f6f7fb 1px;
+  padding: 5px;
+  padding-top: 20px;
+  margin: 10px;
+}
+.proniaForm .formInput #message {
+  padding-bottom: 50px;
+  min-width: 90%;
+}
+.proniaForm .formInput button {
+  background-color: #abd373;
+  color: white;
+  border: none;
+  border-radius: 5%;
+  width: 100px;
+  height: 30px;
+  margin: 20px;
+}
+.proniaForm .formInput span {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .banner {
@@ -776,23 +856,52 @@ footer .footerFlexParent .gotAQuestion {
 }
 
 @media (max-width: 350px) {
-  .mobileNav ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border: solid 2px #abd373;
-    background-color: #abd373;
-    width: 40%;
-    position: relative;
-    left: 60%;
-    padding: 0;
+  .mobileNav {
+    background-color: red;
+    height: 100px;
+    width: 100px;
   }
-  .mobileNav a {
-    color: black;
-    font-family: rubik;
+  .headerParent {
+    margin-top: 10vh;
+  }
+  .headerText {
+    max-width: 50%;
+    margin-right: 25%;
+  }
+  .newCollections .collectionsTop .cactusCollection .newCollections .collectionsBottom .plantPort2 {
+    background-size: auto;
+    background-position-x: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .shoppingCart img {
+    position: relative;
+    left: 40vw;
+    padding: 0;
+    height: 5px;
+    width: 5px;
   }
 }
 @media (max-width: 400px) {
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .mobileMenu .mobileNavBars {
+    width: 25px;
+    height: 5px;
+    display: flex;
+    margin: 2px;
+    border: solid 1px black;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .navButtons a {
+    display: none;
+  }
   .servicesParent {
     display: flex;
     flex-direction: column;
@@ -825,6 +934,16 @@ footer .footerFlexParent .gotAQuestion {
   }
 }
 @media (max-width: 500px) {
+  .mobileNav {
+    position: relative;
+    left: 100%;
+  }
+  .mobileNavButtons {
+    display: none;
+  }
+  .mobileNavButtons li a {
+    display: none;
+  }
   .wrapper {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -973,7 +1092,7 @@ footer .footerFlexParent .gotAQuestion {
     max-width: 70vw;
   }
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .headerParent {
     flex-direction: column;
     justify-content: center;
@@ -1000,37 +1119,9 @@ footer .footerFlexParent .gotAQuestion {
     height: 350px;
   }
 }
-.navButtons a {
-  display: none;
-}
-
-.headerText {
-  max-width: 50%;
-  margin-right: 25%;
-}
-
-.newCollections .collectionsTop .cactusCollection {
-  /* margin: 1%; */
-  /* background-size: cover; */
-  background-size: auto;
-  background-position-x: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.newCollections .collectionsTop .plantPort {
-  /* padding-top: 30px; */
-  justify-content: center;
-  background-position-x: center;
-}
-
-.newCollections .collectionsBottom .hangingCollection {
-  background-position-x: 60%;
-}
-
-.newCollections .collectionsBottom .plantPort2 {
-  /* padding-top: 30px; */
-  align-items: center;
-  justify-content: center;
+@media (min-width: 350px) {
+  .mobileNav {
+    position: relative;
+    left: 100%;
+  }
 }

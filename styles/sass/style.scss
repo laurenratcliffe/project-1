@@ -1,8 +1,40 @@
-@use "sass/partials/variables";
-@use "sass/partials/setup";
-@use "sass/partials/generalStyling";
-@use "sass/partials/navigation";
+// @use './partials/variables';
+// @use './partials/setup';
+// @use './partials/generalStyling';
+// @use './partials/navigation';
 
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+// general styling
+* { 
+   margin: 0;
+}
+
+html,
+body { 
+   overflow-x: hidden;
+}
+a {
+   text-decoration: none;
+}
+
+li { 
+   list-style: none;
+}
+
+.wrapper {
+   margin-left: 15vw;
+   margin-right: 15vw;
+}
+
+img { 
+   padding: 0;
+}
 
 // colour variables
 $greenColour: #abd373;
@@ -14,6 +46,130 @@ $peachColour: #F8EEE5;
 // font variables
 $primaryFont: Rubik, sans-serif;
 $secondaryFont: Rubik, sans-serif;
+
+   
+
+// Navigation section
+nav { 
+   height: 12vh;
+   .navParent { 
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      .navButtons ul { 
+         display: flex;
+         flex-direction: row;
+         a { 
+            padding: 2vw; 
+            font-family: rubik;
+            color: black;
+         }
+      }
+      .logo img { 
+         height: 45px;
+         width: 80px;
+      }
+      .shoppingCart img { 
+         height: 30px;
+         width: 30px;
+      }
+   } 
+   .mobileNavBars { 
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      p { 
+         line-height: 5px;
+         width: 20px;
+      }
+   }
+}
+
+// Styling Contact Page
+
+// Contact page header
+.contactHeader { 
+   background-color: white;
+   height: 40vh;
+   background-size: cover;
+   background-image: url(../assets/contact-header.jpg);
+   display: flex;
+   justify-content: center;
+   h1 { 
+      font-family: $primaryFont;
+   }
+}
+
+// Contact page form
+.proniaForm { 
+   min-height: 300px;
+   display: flex;
+   margin-top: 5vh;
+   margin-bottom: 5vh;
+   border: solid 2px $lightGreyColour;
+   font-size: 10px;
+   box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
+   .formInstructions { 
+      background-image: url(../assets/contact.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      color: white;
+      padding: 30px 20px;
+      text-align: left;
+      h4 { 
+         font-size: 2em;
+         font-family: $primaryFont;
+         line-height: 25px;
+         padding-bottom: 10px;
+      }
+      h3 { 
+         font-size: 1em;
+         font-family: $primaryFont;
+         padding-bottom: 10px;
+      }
+      p { 
+         font-size: 1em;
+         font-family: $primaryFont;
+         line-height: 25px;
+      }
+   }
+   .formInput { 
+      #firstName, 
+      #lastName, 
+      #phone, 
+      #email, 
+      #message {
+         width: 40%;
+         flex-wrap: wrap;
+         border: none;
+         border-bottom: solid $lightGreyColour 1px;
+         padding: 5px;
+         padding-top: 20px;
+         margin: 10px;
+      }
+      #message { 
+         padding-bottom: 50px;
+         min-width: 90%;
+      }
+      button { 
+         background-color: $greenColour;
+         color: white;
+         border: none;
+         border-radius: 5%;
+         width: 100px;
+         height: 30px;
+         margin: 20px;
+      }
+      span { 
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+}
 
 
 // banner styling
@@ -537,32 +693,63 @@ footer {
    }
 }
 
-// Media Query messed up my styling when I put it into the partial, so I kept it here.
-@media (max-width: 350px) {
+// Media Queries 
+@media (max-width: 350px){
 .mobileNav { 
-   ul {
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      border: solid 2px #abd373;
-      background-color: #abd373;
-      width: 40%;
+   background-color: red;
+   height: 100px;
+   width: 100px;
+}
+.headerParent { 
+   margin-top: 10vh;
+}
+.headerText {
+   max-width: 50%;
+   margin-right: 25%;
+   }
+   
+   .newCollections 
+   .collectionsTop 
+   .cactusCollection
+   .newCollections 
+   .collectionsBottom 
+   .plantPort2 {
+   background-size: auto;
+   background-position-x: center;
+   text-align: center;
+   align-items: center;
+   justify-content: center;
+   }
+   .shoppingCart img { 
       position: relative;
-      left: 60%;
+      left: 40vw;
       padding: 0;
-    }
-    
-    a {
-      color: black;
-      font-family: rubik;
-    }
+      height: 5px;
+      width: 5px;  
+
    }
 }  
 
 
-
 @media (max-width: 400px){
-   // Service 350px
+   .mobileMenu { 
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .mobileNavBars {
+         width: 25px;
+         height: 5px;
+         display: flex;
+         margin: 2px;
+         border: solid 1px black;
+         background-color: black;
+         border-radius: 10px;
+         overflow: hidden;
+      }
+   }
+   .navButtons a {
+      display: none;
+    }
    .servicesParent { 
       display: flex;
       flex-direction: column;
@@ -602,6 +789,16 @@ footer {
 }
 
 @media (max-width: 500px){
+   .mobileNav { 
+      position: relative; 
+      left: 100%;
+   }
+   .mobileNavButtons { 
+      display: none; 
+      li a { 
+         display: none;
+      }
+   }
    .wrapper {
       margin-left: 5vw;
       margin-right: 5vw;
@@ -731,8 +928,6 @@ footer {
          }
       }
     }
- // changed display to none for the links for the purpose of visualization of the website. Ideally I would implement a drop down menu 
-
 
 // Contact Page Query
     .contactHeader h1 { 
@@ -760,8 +955,7 @@ footer {
    }  
 }
 
-  
-@media (max-width: 1200px) { 
+@media (min-width: 1200px) { 
    .headerParent { 
       flex-direction: column;
       justify-content: center;
@@ -770,8 +964,6 @@ footer {
          line-height: 5vh;
          display: flex;
          flex-direction: column;
-         // justify-content: center;
-         // align-items: flex-end;
          padding-top: 15%;
          padding-right: 0;
          h2 { 
@@ -790,53 +982,12 @@ footer {
       }
    }
 }
-
-
-// May 9th Changes
-
-.navButtons a {
-  display: none;
+@media (min-width: 350px) { 
+   .mobileNav { 
+      position: relative; 
+      left: 100%;
+   }
 }
 
 
-.headerText {
-  max-width: 50%;
-  margin-right: 25%;
-}
 
-.newCollections .collectionsTop .cactusCollection {
-  /* margin: 1%; */
-  /* background-size: cover; */
-  background-size: auto;
-  background-position-x: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
-
-.newCollections .collectionsTop .plantPort {
-  /* padding-top: 30px; */
-  justify-content: center;
-  background-position-x: center;
-}
-
-.newCollections .collectionsBottom .hangingCollection {
-  background-position-x: 60%;
-}
-
-.newCollections .collectionsBottom .plantPort2 {
-  /* padding-top: 30px; */
-  align-items: center;
-  justify-content: center;
-}
-
-// footer .footerFlexParent .usefulLinks h4, footer .footerFlexParent .myAccount h4, footer .footerFlexParent .ourService h4, footer .footerFlexParent .gotAQuestion h4 {
-//   /* padding-bottom: 25px; */
-// }
-
-// @media (max-width: 400px) {
-//   img {
-//     /* padding-right: 20px; */
-//     /* padding-top: 20px; */
-//   }
-// }
