@@ -2,10 +2,14 @@
 // Add drop down menu 
 // Add checkout functionality
 
-const navBar = document.querySelector('.mobileNav');
-const navClick = document.querySelector('.mobileNavBars');
-navClick.addEventListener('click', () => { 
-    console.log('i clicked it');
-})
+
+const navBars = document.querySelector('.mobileMenu');
+const mobileNav = document.querySelector('.mobileNav');
+navBars.addEventListener('click', () => { 
+    navBars.classList.toggle('active');
+    mobileNav.classList.toggle('active');
+});
+
+
 
 
