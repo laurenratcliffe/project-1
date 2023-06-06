@@ -253,7 +253,7 @@ img {
 }
 
 nav {
-  height: 8vh;
+  height: 10vh;
 }
 nav .navParent {
   display: -webkit-box;
@@ -1409,7 +1409,7 @@ footer .footerFlexParent .gotAQuestion {
   .mobileNav {
     background-color: #abd373;
     position: fixed;
-    margin-top: 8vh;
+    margin-top: 10vh;
     left: 100%;
     width: 50vw;
     height: 100vh;

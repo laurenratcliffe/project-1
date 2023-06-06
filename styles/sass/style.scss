@@ -51,7 +51,7 @@ $secondaryFont: Rubik, sans-serif;
 
 // Navigation section
 nav { 
-   height: 8vh;
+   height: 10vh;
    .navParent { 
       display: flex;
       flex-direction: row;
@@ -990,7 +990,7 @@ footer {
    .mobileNav { 
       background-color: $greenColour;
       position: fixed;
-      margin-top: 8vh;
+      margin-top: 10vh;
       left: 100%;
       width: 50vw;
       height: 100vh;
