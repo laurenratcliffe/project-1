@@ -1,14 +1,25 @@
-// Add Hamburger menu 
-// Add drop down menu 
-// Add checkout functionality
-
 
 const navBars = document.querySelector('.mobileMenu');
-const mobileNav = document.querySelector('.mobileNav');
-navBars.addEventListener('click', () => { 
-    navBars.classList.toggle('active');
-    mobileNav.classList.toggle('active');
+const menuToggle = document.querySelector('.mobileNav');
+let menuVisible = false;
+
+
+navBars.addEventListener('click', function(){
+    if (menuVisible) { 
+       menuToggle.style.left = '100%';
+    } else { 
+       menuToggle.style.left = '50%';
+    }
+    menuVisible = !menuVisible;
+})
+
+window.addEventListener('scroll', function () { 
+    if (menuVisible){ 
+        menuToggle.style.left = "100%";
+        menuVisible = false;
+    }
 });
+
 
 
 
