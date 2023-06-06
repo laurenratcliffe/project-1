@@ -26,7 +26,8 @@ figure {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -44,7 +45,8 @@ a {
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
 }
 
 b, strong {
@@ -138,7 +140,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -156,7 +159,8 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -199,11 +203,13 @@ template {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, *:before, *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 .sr-only {
@@ -214,7 +220,8 @@ html {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -246,18 +253,32 @@ img {
 }
 
 nav {
-  height: 12vh;
+  height: 8vh;
 }
 nav .navParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
 }
 nav .navParent .navButtons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 nav .navParent .navButtons ul a {
   padding: 2vw;
@@ -273,9 +294,16 @@ nav .navParent .shoppingCart img {
   width: 30px;
 }
 nav .mobileNavBars {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 nav .mobileNavBars p {
   line-height: 5px;
@@ -287,8 +315,12 @@ nav .mobileNavBars p {
   height: 40vh;
   background-size: cover;
   background-image: url(../assets/contact-header.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contactHeader h1 {
   font-family: Rubik, sans-serif;
@@ -296,19 +328,27 @@ nav .mobileNavBars p {
 
 .proniaForm {
   min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 5vh;
   margin-bottom: 5vh;
   border: solid 2px #f6f7fb;
   font-size: 10px;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
 }
 .proniaForm .formInstructions {
   background-image: url(../assets/contact.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
   padding: 30px 20px;
   text-align: left;
@@ -335,7 +375,8 @@ nav .mobileNavBars p {
 .proniaForm .formInput #email,
 .proniaForm .formInput #message {
   width: 40%;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border: none;
   border-bottom: solid #f6f7fb 1px;
   padding: 5px;
@@ -356,8 +397,12 @@ nav .mobileNavBars p {
   margin: 20px;
 }
 .proniaForm .formInput span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .banner {
@@ -368,14 +413,27 @@ nav .mobileNavBars p {
 }
 .banner .bannerParent {
   font-family: rubik;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: row;
-  justify-content: space-between;
+  -webkit-box-pack: row;
+      -ms-flex-pack: row;
+          justify-content: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .banner .bannerButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 5px;
 }
 .banner .bannerParent a {
@@ -388,16 +446,29 @@ header {
   height: 80vh;
   width: 100vw;
   font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header .headerParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 header .headerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-width: 40vw;
   line-height: 70px;
 }
@@ -432,14 +503,25 @@ header .headerImage img {
 }
 
 .servicesParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   padding: 100px;
 }
 .servicesParent .servicesBoxParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: row;
+  -webkit-box-pack: row;
+      -ms-flex-pack: row;
+          justify-content: row;
   padding: 10px;
   margin: 10px;
   border-style: dotted;
@@ -462,8 +544,13 @@ header .headerImage img {
   width: 50px;
 }
 .servicesParent .servicesBoxParent .servicesBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 10px;
 }
 
@@ -492,27 +579,40 @@ header .headerImage img {
 }
 
 .plantInventory {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1000px;
   gap: 20px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .plantInventory img {
   width: 225px;
   height: 225px;
 }
 .plantInventory .plantForSale {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .plantInventory .plantForSale .plantInfo img {
   border-radius: 25%;
   width: 30px;
   height: 30px;
   padding: 7px;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
 }
 .plantInventory .plantForSale .plantInfo p {
   font-family: Rubik, sans-serif;
@@ -535,6 +635,8 @@ header .headerImage img {
   font-weight: bolder;
 }
 .newCollections .collectionsTop {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 70vw;
 }
@@ -545,8 +647,13 @@ header .headerImage img {
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   line-height: 50px;
   padding: 30px;
   margin-bottom: 5%;
@@ -571,9 +678,16 @@ header .headerImage img {
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 30px;
   line-height: 40px;
   margin-bottom: 5%;
@@ -593,6 +707,8 @@ header .headerImage img {
   margin-top: 10px;
 }
 .newCollections .collectionsBottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 70vw;
 }
@@ -603,9 +719,16 @@ header .headerImage img {
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 30px;
   line-height: 40px;
   margin-bottom: 5%;
@@ -631,8 +754,13 @@ header .headerImage img {
   min-height: 25vh;
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   line-height: 50px;
   padding: 30px;
   margin-bottom: 5%;
@@ -669,16 +797,25 @@ header .headerImage img {
   line-height: 2em;
 }
 .latestPosts .articles {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 40px;
 }
 .latestPosts .articles .article1,
 .latestPosts .articles .article2,
 .latestPosts .articles .article3 {
   max-width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f6f7fb;
   border-radius: 5%;
   padding-left: 25px;
@@ -720,14 +857,28 @@ footer {
   font-size: 15px;
 }
 footer .footerFlexParent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 footer .footerFlexParent .proniaInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 20%;
   margin: 30px;
 }
@@ -743,6 +894,8 @@ footer .footerFlexParent .proniaInfo p {
   margin-bottom: 15px;
 }
 footer .footerFlexParent .proniaInfo .contactIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 footer .footerFlexParent .proniaInfo .contactIcons img {
@@ -782,8 +935,12 @@ footer .footerFlexParent .gotAQuestion {
   height: 40vh;
   background-size: cover;
   background-image: url(../assets/contact-header.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contactHeader h1 {
   font-family: Rubik, sans-serif;
@@ -791,19 +948,27 @@ footer .footerFlexParent .gotAQuestion {
 
 .proniaForm {
   min-height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-top: 5vh;
   margin-bottom: 5vh;
   border: solid 2px #f6f7fb;
   font-size: 10px;
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.1);
 }
 .proniaForm .formInstructions {
   background-image: url(../assets/contact.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
   padding: 30px 20px;
   text-align: left;
@@ -830,7 +995,8 @@ footer .footerFlexParent .gotAQuestion {
 .proniaForm .formInput #email,
 .proniaForm .formInput #message {
   width: 40%;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border: none;
   border-bottom: solid #f6f7fb 1px;
   padding: 5px;
@@ -851,16 +1017,15 @@ footer .footerFlexParent .gotAQuestion {
   margin: 20px;
 }
 .proniaForm .formInput span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media (max-width: 350px) {
-  .mobileNav {
-    background-color: red;
-    height: 100px;
-    width: 100px;
-  }
   .headerParent {
     margin-top: 10vh;
   }
@@ -872,8 +1037,12 @@ footer .footerFlexParent .gotAQuestion {
     background-size: auto;
     background-position-x: center;
     text-align: center;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .shoppingCart img {
     position: relative;
@@ -885,13 +1054,23 @@ footer .footerFlexParent .gotAQuestion {
 }
 @media (max-width: 400px) {
   .mobileMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    cursor: pointer;
   }
   .mobileMenu .mobileNavBars {
     width: 25px;
     height: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 2px;
     border: solid 1px black;
@@ -903,9 +1082,16 @@ footer .footerFlexParent .gotAQuestion {
     display: none;
   }
   .servicesParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     margin: 0;
     padding: 5vw;
     min-width: 90vw;
@@ -915,9 +1101,16 @@ footer .footerFlexParent .gotAQuestion {
     padding-top: 20px;
   }
   .headerParent {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .headerParent .headerText {
     line-height: 5vh;
@@ -949,12 +1142,22 @@ footer .footerFlexParent .gotAQuestion {
     margin-right: 5vw;
   }
   .banner {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .headerParent {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .headerParent .headerText {
     line-height: 5vh;
@@ -973,34 +1176,57 @@ footer .footerFlexParent .gotAQuestion {
     height: 350px;
   }
   .servicesParent {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding: 5vw;
     margin: 0;
     min-width: 90vw;
   }
-  .servicesParent img {
-    padding-right: 20px;
-    padding-top: 20px;
-  }
   .newCollections {
     margin: 0;
     margin-top: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .collectionsTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .collectionsBottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
   .articles {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 10px;
   }
   .articles .article1,
@@ -1017,13 +1243,25 @@ footer .footerFlexParent .gotAQuestion {
     padding: 2vh;
   }
   footer .footerFlexParent {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .footerFlexParent .proniaInfo {
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-width: 80vw;
   }
   footer .footerFlexParent .proniaInfo p {
@@ -1049,14 +1287,21 @@ footer .footerFlexParent .gotAQuestion {
     line-height: 1em;
   }
   footer .contactIcons {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   footer .usefulLinks,
   footer .myAccount,
   footer .ourService {
     min-width: 90vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   footer .usefulLinks h2,
   footer .myAccount h2,
@@ -1066,42 +1311,80 @@ footer .footerFlexParent .gotAQuestion {
   footer .usefulLinks a,
   footer .myAccount a,
   footer .ourService a {
-    align-self: row;
+    -ms-flex-item-align: row;
+        align-self: row;
     display: none;
   }
   .contactHeader h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .contactHeader h1 .proniaForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .contactHeader h1 .proniaForm .formInstructions {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-image: cover;
     padding: 30px 100px;
   }
   .contactHeader h1 .proniaForm .formInput {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     max-width: 70vw;
   }
 }
 @media (min-width: 1200px) {
   .headerParent {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .headerParent .headerText {
     line-height: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding-top: 15%;
     padding-right: 0;
   }
@@ -1120,8 +1403,45 @@ footer .footerFlexParent .gotAQuestion {
   }
 }
 @media (min-width: 350px) {
+  .navParent img {
+    padding: 0;
+  }
   .mobileNav {
-    position: relative;
+    background-color: #abd373;
+    position: fixed;
+    margin-top: 8vh;
     left: 100%;
+    width: 50vw;
+    height: 100vh;
+    opacity: 90%;
+    -webkit-transition: left 0.5s;
+    transition: left 0.5s;
+  }
+  .mobileNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: space-around;
+        -ms-flex-align: space-around;
+            align-items: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .mobileNav ul a {
+    font-family: Rubik, sans-serif;
+    color: black;
+    line-height: 60px;
+  }
+  .mobileNav ul a:hover {
+    font-weight: 600;
+  }
+  .mobileNav.active {
+    left: 50%;
   }
 }
