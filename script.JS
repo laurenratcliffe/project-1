@@ -1,3 +1,4 @@
+//Mobile Nav Bar Menu Toggle
 
 const navBars = document.querySelector('.mobileMenu');
 const menuToggle = document.querySelector('.mobileNav');
