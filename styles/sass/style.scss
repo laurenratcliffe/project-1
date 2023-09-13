@@ -76,6 +76,8 @@ nav {
          width: 30px;
       }
    } 
+ 
+ 
    .mobileNavBars { 
       display: flex;
       flex-direction: column;
@@ -85,7 +87,12 @@ nav {
          width: 20px;
       }
    }
+
 }
+
+.mobileNav > ul:nth-child(1) {
+   display: none;
+ }
 
 // Styling Contact Page
 
@@ -205,7 +212,7 @@ header {
    font-size: 15px;
    display: flex;
    align-items: center;
-
+   justify-content: center;
    .headerParent { 
       display: flex;
    }
@@ -246,7 +253,7 @@ header {
       .headerImage img { 
          height: 500px;
          width: 400px;
-         margin-right: 200px;
+         // margin-right: 200px;
       }
 }
 
@@ -319,10 +326,10 @@ header {
 .plantInventory {
    display: flex;
    flex-wrap: wrap;
-   max-width: 1000px;
    gap: 20px;
    justify-content: center;
    
+  
    img { 
          width: 225px; 
          height: 225px;
@@ -331,7 +338,8 @@ header {
       display: flex; 
       flex-direction: column;
       align-items: center;
-
+      justify-content: center;
+      
       .plantInfo img { 
          border-radius: 25%;
          width: 30px; 
@@ -371,17 +379,19 @@ header {
          background-image: url(../assets/b1.jpeg);
          margin: 1%;
          min-width: 65%;
-         min-height: 35vh;
+         min-height: 25vh;
          background-size: cover;
          background-repeat: no-repeat;
          display: flex;
          flex-direction: column;
          line-height: 50px;
-         padding: 30px;
+         padding: 7%;
          margin-bottom: 5%;
+         justify-content: center;
          h4, 
          h3 { 
             text-align: left;
+           
          }
          button { 
             background-color: $greenColour;
@@ -392,7 +402,6 @@ header {
             border-radius: 30px;
             margin-top: 10px;
          }
-         
       }
       .plantPort { 
          background-image: url(../assets/b2.jpeg);
@@ -404,9 +413,10 @@ header {
          display: flex;
          flex-direction: column;
          align-items: center;
-         padding: 30px;
+         padding: 7%;
          line-height: 40px;
          margin-bottom: 5%;
+         justify-content: center;
          h4, 
          h3 { 
             text-align: center;
@@ -436,9 +446,10 @@ header {
          display: flex;
          flex-direction: column;
          align-items: center;
-         padding-top: 30px;
+         padding: 7%;
          line-height: 40px;
          margin-bottom: 5%;
+         justify-content: center;
          h4, 
          h3 { 
             text-align: center;
@@ -465,8 +476,9 @@ header {
          display: flex;
          flex-direction: column;
          line-height: 50px;
-         padding: 30px;
+         padding: 7%;
          margin-bottom: 5%;
+         justify-content: center;
          h4, 
          h3 { 
             text-align: left;
@@ -693,315 +705,142 @@ footer {
    }
 }
 
-// Media Queries 
-@media (max-width: 350px){
-// .mobileNav { 
-//    background-color: rgb(22, 8, 151);
-//    height: 100px;
-//    width: 100px;
-// }
-.headerParent { 
-   margin-top: 10vh;
-}
-.headerText {
-   max-width: 50%;
-   margin-right: 25%;
-   }
-   
-   .newCollections 
-   .collectionsTop 
-   .cactusCollection
-   .newCollections 
-   .collectionsBottom 
-   .plantPort2 {
-   background-size: auto;
-   background-position-x: center;
-   text-align: center;
-   align-items: center;
-   justify-content: center;
-   }
-   .shoppingCart img { 
-      position: relative;
-      left: 40vw;
-      padding: 0;
-      height: 5px;
-      width: 5px;  
+// // Media Queries 
 
-   }
-}  
+@media (max-width: 70em) { 
 
-
-@media (max-width: 400px){
-   .mobileMenu { 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      cursor: pointer;
-      .mobileNavBars {
-         width: 25px;
-         height: 5px;
-         display: flex;
-         margin: 2px;
-         border: solid 1px black;
-         background-color: black;
-         border-radius: 10px;
-         overflow: hidden;
-      }
+.navParent { 
+   padding: none;
+   .shoppingCart{ 
+      margin-left: 2vw;
+      margin-right: 2vw;
    }
-   .navButtons a {
+
+   .navButtons { 
       display: none;
+   }
+}
+.headerParent {
+   flex-direction: column-reverse;
+   align-items: center;
+   justify-content: center;
+   .headerText { 
+      padding-left: 15%;
+      padding-right: 15%;
+      line-height: 1.5;
+   }
+
+   .headerImage img {
+      max-width: 80vw;
+      max-height: auto;
     }
-   .servicesParent { 
+ }
+
+ .servicesParent { 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   
+   padding: 2vw;
+   margin: 0;
+   margin-right: 20vw;
+   margin-left: 20vw;
+   margin-bottom: 10vw;
+   .servicesBoxParent { 
+      flex-direction: column;
+      align-items: center;
+   }
+      img { 
+         padding-right: 5px;
+         padding-top: 5px;
+      }
+   }
+
+.newCollections {
+   .collectionsTop, 
+   .collectionsBottom { 
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
-      margin: 0;
-      padding:5vw;
-      min-width: 90vw;
-      }
-      img { 
-         padding-right: 20px;
-         padding-top: 20px;
-      }
-   // Header 350px
-   .headerParent { 
+   
+   }
+} 
+
+.latestPosts{ 
+   .articles { 
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .headerText { 
-         line-height: 5vh;
-         // display: flex;
-         // flex-direction: column;
-         // justify-content: flex-start;
-         padding-bottom: 0;
-         // max-width: 50vw;
-         
-         h2 { 
-            font-size: 1.5em;
-         }
-         h3 {
-            font-size: 2em;
-         }
-         h4 {
-            font-size: 0.5em;
-         }
+      .article1, 
+      .article2, 
+      .article3 {
+         max-width: 90vw;
+         margin-bottom: 2vh;
       }
    }
 }
 
-@media (max-width: 500px){
-   .mobileNav { 
-      position: relative; 
-      left: 100%;
-   }
-   .mobileNavButtons { 
-      display: none; 
-      li a { 
-         display: none;
-      }
-   }
-   .wrapper {
-      margin-left: 5vw;
-      margin-right: 5vw;
-      }
-      // Banner Media Query
-   .banner {
-      flex-direction: column;
-    }
-  //  Header Media Query
-  .headerParent { 
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   .headerText { 
-      line-height: 5vh;
-      h2 { 
-         font-size: 2em;
-      }
-      h3 {
-         font-size: 3em;
-      }
-      h4 {
-         font-size: 1em;
-      }
-   }
-     
-      .headerImage img { 
-      width: 250px;
-      height: 350px;
-      }
 
-   }
-
-//  Services Media Query
-    .servicesParent { 
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      padding:5vw;
-      margin: 0;
-      min-width: 90vw;
-      img { 
-         // padding-right: 20px;
-         // padding-top: 20px;
-      }
-   }
-
-// New Collections Media Query
-    .newCollections { 
-      margin: 0;
-      margin-top: 10vh;
-      display: flex;
+footer { 
+   padding: 2vh;
+   .footerFlexParent { 
       flex-direction: column;
       align-items: center;
-   }
-   .collectionsTop { 
-      display: flex; 
-      flex-direction: column;
-   }
-
-   .collectionsBottom { 
-      display: flex; 
-      flex-direction: column-reverse;
-   }
-   
-
-// Article Section Media Query
-    .articles { 
-      flex-direction: column;
-      margin-bottom: 10px;
-      .article1,
-      .article2,
-      .article3 {
-      min-width: 100%;
-      }
-      .latestPosts .article1,
-      .article2,
-      .article3 {
-         margin: 0;
-      }
-   }
- // Footer Media Query
-    footer { 
-      padding: 2vh;
-      .footerFlexParent { 
-         flex-direction: column;
-         align-items: center;
-         justify-content: center;
-         .proniaInfo { 
-            flex-direction: column;
-            align-items: center;
-            min-width: 80vw;
-            p { 
-               text-align: center;
-            }
-        }
-      } 
+      justify-content: center;
+      .proniaInfo, 
       .usefulLinks, 
       .myAccount, 
       .ourService, 
       .gotAQuestion { 
-         margin: 5px;
-         text-align: center;
-         h4 { 
-            padding-bottom: 5px;
-         }
-         a { 
-            line-height: 1em;
-         }
-       }
-      
-      .contactIcons {
-         flex-direction: row;
-      }
-      .usefulLinks, 
-      .myAccount, 
-      .ourService { 
-         min-width: 90vw;
-         display: flex;
-         justify-content: center;
-         h2 { 
-            line-height: 2px;
-         }
-         a { 
-            align-self: row;
-            display: none;
-         }
-      }
-    }
-
-// Contact Page Query
-    .contactHeader h1 { 
-      display: flex; 
-      justify-content: center;
-      align-items: center;
-       .proniaForm { 
          display: flex;
          flex-direction: column;
          align-items: center;
-         justify-content: center;
-         .formInstructions { 
-            flex-direction: column;
-            justify-content: center;
-            background-image: cover;
-            padding: 30px 100px;
-         }
-         .formInput { 
-            flex-direction: column;
-            justify-content: center;
-            max-width: 70vw;
+         min-width: 80vw;
+         p { 
+            text-align: center;
          }
       }
-
-   }  
+   } 
 }
 
-@media (min-width: 1200px) { 
-   .headerParent { 
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      .headerText { 
-         line-height: 5vh;
-         display: flex;
-         flex-direction: column;
-         padding-top: 15%;
-         padding-right: 0;
-         h2 { 
-            font-size: 2em;
+
+
+//Mobile nav bar styling 
+.mobileMenu { 
+         position: absolute;
+         top: 5vh;
+         left: 85vw;
+         cursor: pointer;
+         
+         .mobileNavBars {
+            width: 25px;
+            height: 5px;
+            display: flex;
+            margin: 2px;
+            border: solid 1px black;
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
          }
-         h3 {
-            font-size: 3em;
-         }
-         h4 {
-            font-size: 1em;
-         }
-      }
-      .headerImage img { 
-         width: 250px;
-         height: 350px;
-      }
-   }
+   
 }
-@media (min-width: 350px) { 
-   .navParent img { 
-      padding: 0;
-   }
-   .mobileNav { 
-      background-color: $greenColour;
-      position: fixed;
-      margin-top: 10vh;
-      left: 100%;
-      width: 50vw;
-      height: 100vh;
-      opacity: 90%;
-      transition: left 0.5s;
+
+.mobileNav { 
+         position: relative; 
+         left: 100%;
+         background-color: $greenColour;
+         position: fixed;
+         margin-top: 10vh;
+         left: 100%;
+         width: 50vw;
+         height: 100vh;
+         opacity: 90%;
+         transition: left 0.5s;
+      }
       ul{ 
          display: flex;
          flex-direction: column;
          align-items: space-around;
          align-items: center;
          padding: 0;
+        
          a { 
             font-family: $primaryFont;
             color: black;
@@ -1011,12 +850,25 @@ footer {
             font-weight: 600;
          }
       }
-   }
+      .mobileNavButtons { 
+         display: none; 
+         li a { 
+            display: none;
+         }
+      }
+      .mobileNav.active { 
+         left: 50%;
+      }
 
-   // .mobileNav.active { 
-   //    left: 50%;
-   // }
 }
 
+@media (max-width: 486px) { 
+   .mobileMenu { 
+      margin-top: 1vh;
+   }
+}
+
+
+ 
 
 
